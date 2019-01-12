@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import Typist from 'react-typist'
+import React from 'react';
+import styled from 'styled-components';
+import Typist from 'react-typist';
 
 const Text = styled.div`
   font-size: 26px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 300;
-`
+`;
 
 export class TypistLabel extends React.Component {
   render() {
@@ -16,6 +16,6 @@ export class TypistLabel extends React.Component {
           Filip Czabator
         </Typist>
       </Text>
-    )
+    );
   }
 }
