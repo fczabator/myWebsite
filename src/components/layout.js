@@ -1,11 +1,16 @@
 import React from 'react';
 import {TypistHeader} from './TypistHeader';
 import './layout.css';
-import styled from 'styled-components';
+import styled, {ThemeProvider} from 'styled-components';
 import {Navigation} from './Navigation';
+import {theme} from '../constants/theme';
 
 const Content = styled.div`
-  margin: 10% 12%;
+  margin: 10% 21%;
+
+  @media (max-width: 700px) {
+    margin: 10% 12%;
+  }
 `;
 const Header = styled.div`
   margin: 20px 10px;
@@ -25,15 +30,17 @@ const Centered = styled.div`
 `;
 
 const Layout = ({children}) => (
-  <Page>
-    <Header>
-      <Navigation />
-      <Centered>
-        <TypistHeader />
-      </Centered>
-    </Header>
-    <Content>{children}</Content>
-  </Page>
+  <ThemeProvider theme={theme}>
+    <Page>
+      <Header>
+        <Navigation />
+        <Centered>
+          <TypistHeader />
+        </Centered>
+      </Header>
+      <Content>{children}</Content>
+    </Page>
+  </ThemeProvider>
 );
 
 export default Layout;
