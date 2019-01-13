@@ -8,11 +8,15 @@ const Text = styled.div`
   font-weight: 300;
 `;
 
-export class TypistLabel extends React.Component {
+export class TypistHeader extends React.Component {
   render() {
     return (
       <Text>
         <Typist startDelay={2000} avgTypingDelay={200}>
+          Filip Czabator
+          <Typist.Backspace count={14} delay={4000} />
+          React & Node Developer
+          <Typist.Backspace count={22} delay={4000} />
           Filip Czabator
         </Typist>
       </Text>

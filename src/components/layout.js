@@ -1,14 +1,18 @@
 import React from 'react';
-import {TypistLabel} from './Title';
+import {TypistHeader} from './TypistHeader';
 import './layout.css';
 import styled from 'styled-components';
 import {Navigation} from './Navigation';
 
 const Content = styled.div`
-  margin: 30px auto;
+  margin: 10% 12%;
 `;
 const Header = styled.div`
   margin: 20px 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 const Page = styled.div`
   display: flex;
@@ -25,7 +29,7 @@ const Layout = ({children}) => (
     <Header>
       <Navigation />
       <Centered>
-        <TypistLabel />
+        <TypistHeader />
       </Centered>
     </Header>
     <Content>{children}</Content>
