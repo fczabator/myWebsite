@@ -29,13 +29,13 @@ const Centered = styled.div`
   justify-content: center;
 `;
 
-const Layout = ({children}) => (
+const Layout = ({children, headers}) => (
   <ThemeProvider theme={theme}>
     <Page>
       <Header>
         <Navigation />
         <Centered>
-          <TypistHeader />
+          <TypistHeader headers={headers} />
         </Centered>
       </Header>
       <Content>{children}</Content>

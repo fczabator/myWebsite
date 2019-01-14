@@ -6,13 +6,16 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+
+  @media (max-width: 700px) {
+    justify-content: space-around;
+  }
 `;
 
 export const Navigation = () => (
   <Container>
-    <NavigationLink text="Home" />
-    <NavigationLink text="My Projects" />
-    <NavigationLink text="Blog" />
-    <NavigationLink text="Contact" />
+    <NavigationLink text="Home" url="/" />
+    <NavigationLink text="My Projects" url="/projects" />
+    <NavigationLink text="Contact" url="/contact" />
   </Container>
 );

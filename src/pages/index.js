@@ -6,7 +6,7 @@ import {SectionHeader} from '../components/SectionHeader';
 import {Section} from '../components/Section';
 
 const IndexPage = () => (
-  <Layout>
+  <Layout headers={['Filip Czabator', 'React & Node Developer']}>
     <Seo
       title="Home"
       keywords={[`filip`, `czabator`, `react`, `filipczabator`, `fczabator`]}
