@@ -21,15 +21,16 @@ const StyledTypist = styled(Typist)`
 
 export const TypistHeader = ({headers}) => (
   <Text>
-    <StyledTypist className="" startDelay={1000} avgTypingDelay={200}>
+    <StyledTypist startDelay={1000} avgTypingDelay={200}>
       <div style={{display: 'flex'}}>
-        {headers.length > 1 &&
-          headers.map(header => (
-            <div key="header">
-              {header}
-              <Typist.Backspace count={header.length} delay={1000} />
-            </div>
-          ))}
+        {headers.length > 1
+          ? headers.map(header => (
+              <div key="header">
+                {header}
+                <Typist.Backspace count={header.length} delay={1000} />
+              </div>
+            ))
+          : ''}
         {headers[0]}
       </div>
     </StyledTypist>
