@@ -26,6 +26,7 @@ const BackgroundSection = ({className, children}) => (
           className={className}
           fluid={imageData}
           backgroundColor={`#040e18`}
+          imgStyle={{backgroundPosition: 'center center', top: '200px'}}
         >
           {children}
         </BackgroundImage>
@@ -37,8 +38,10 @@ const BackgroundSection = ({className, children}) => (
 const StyledBackgroundImage = styled(BackgroundSection)`
   width: 100%;
   height: 100vh;
-  background-position: center;
-  background-repeat: repeat-y;
+  background-position: center center;
+  ::before {
+    background-position: center center;
+  }
 `;
 
 export default StyledBackgroundImage;
