@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import Typist from 'react-typist';
 
 const Text = styled.div`
-  font-size: 38px;
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 48px;
+  font-family: Courier, monospace;
   font-weight: 300;
   display: flex;
-  color: ${props => props.theme.primary};
+  color: #ffffff;
 
   @media (max-width: 700px) {
     font-size: 21px;

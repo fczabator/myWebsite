@@ -1,9 +1,9 @@
-import React from 'react';
-import {TypistHeader} from './TypistHeader';
-import './layout.css';
-import styled, {ThemeProvider} from 'styled-components';
-import {Navigation} from './Navigation';
-import {theme} from '../constants/theme';
+import React from "react";
+import { TypistHeader } from "./TypistHeader";
+import "./layout.css";
+import styled, { ThemeProvider } from "styled-components";
+import { Navigation } from "./Navigation";
+import { theme } from "../constants/theme";
 
 const Content = styled.div`
   margin: 10% 21%;
@@ -29,7 +29,7 @@ const Centered = styled.div`
   justify-content: center;
 `;
 
-const Layout = ({children, headers}) => (
+const Layout = ({ children, headers }) => (
   <ThemeProvider theme={theme}>
     <Page>
       <Header>
