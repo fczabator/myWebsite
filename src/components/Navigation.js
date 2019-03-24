@@ -3,9 +3,11 @@ import {NavigationLink} from './NavigationLink';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  position: absolute;
+  left: 50px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
 
   @media (max-width: 700px) {
     justify-content: space-around;
