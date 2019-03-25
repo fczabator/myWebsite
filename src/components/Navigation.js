@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationLink} from './NavigationLink';
 import styled from 'styled-components';
+import {Location} from '@reach/router';
 
 const Container = styled.div`
   position: absolute;
@@ -14,10 +15,32 @@ const Container = styled.div`
   }
 `;
 
+const navigationLink = [
+  {
+    text: 'About',
+    path: '/about'
+  },
+  {
+    text: 'My Projects',
+    path: '/projects'
+  },
+  {
+    text: 'Contact',
+    path: '/contact'
+  }
+];
+
+const renderNavigationLinks = ({location}) =>
+  navigationLink.map(link => (
+    <NavigationLink
+      text={link.text}
+      url={link.path}
+      isActive={link.path === location.pathname}
+    />
+  ));
+
 export const Navigation = () => (
   <Container>
-    <NavigationLink text="Home" url="/" />
-    <NavigationLink text="My Projects" url="/projects" />
-    <NavigationLink text="Contact" url="/contact" />
+    <Location>{renderNavigationLinks}</Location>
   </Container>
 );
