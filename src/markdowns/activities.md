@@ -1,8 +1,6 @@
 ---
-title: "About"
+title: "Activities"
 ---
-#About
-
 ## learning new stuff
 ## attending meetups 
 ## trying new programming frameworks and paradigms
@@ -15,5 +13,3 @@ title: "About"
 ## hiking in the mountains
 ## finding shockingly cheap flights around Europe
 ## ...
-
-

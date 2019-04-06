@@ -6,7 +6,7 @@ import {SectionContent} from '../components/SectionContent';
 import styled from 'styled-components';
 
 const calculateFont = (startFont, order) => {
-  const calculatedFont = startFont - order;
+  const calculatedFont = startFont - order * 2;
   return calculatedFont > 0 ? calculatedFont : 1;
 };
 
@@ -15,23 +15,28 @@ const Activity = styled.span`
 `;
 
 const AboutPage = ({data}) => {
-  const {headings} = data.allMarkdownRemark.edges[0].node;
-  const title = headings.find(heading => heading.depth === 1).value;
+  console.log('data: ', data);
+  const {headings} = data.markdownRemark;
   const activities = headings
     .filter(heading => heading.depth === 2)
     .map(heading => heading.value);
 
   return (
     <Layout>
-      <SectionHeader>{title}</SectionHeader>
+      <SectionHeader>About</SectionHeader>
 
       <SectionContent>
         I'm software developer based in calm Wrocław. I like
         {activities.map((activity, i) => (
-          <Activity startFont={16} order={i}>
+          <Activity startFont={20} order={i}>
             {` ${activity},`}
           </Activity>
         ))}
+      </SectionContent>
+      <SectionContent>
+        There's quite a lot of these. But you're here not to hear about my
+        interests. Check out my resume, projects and contact me if you would
+        like to work with me or just talk about coding ;)
       </SectionContent>
     </Layout>
   );
@@ -39,18 +44,14 @@ const AboutPage = ({data}) => {
 
 export const query = graphql`
   query AboutPageQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          html
-          headings {
-            value
-            depth
-          }
-          frontmatter {
-            title
-          }
-        }
+    markdownRemark(frontmatter: {title: {eq: "Activities"}}) {
+      html
+      headings {
+        value
+        depth
+      }
+      frontmatter {
+        title
       }
     }
   }
