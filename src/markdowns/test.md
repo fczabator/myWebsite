@@ -2,7 +2,7 @@
 title: "About"
 ---
 #About
-I'm software developer based in calm Wrocław. I like 
+
 ## learning new stuff
 ## attending meetups 
 ## trying new programming frameworks and paradigms
@@ -14,5 +14,6 @@ I'm software developer based in calm Wrocław. I like
 ## watching conference videos on youtube
 ## hiking in the mountains
 ## finding shockingly cheap flights around Europe
+## ...
 
 

@@ -7,6 +7,7 @@ import {theme} from '../constants/theme';
 
 export const Content = styled.div`
   font-family: 'Courier New', Courier, monospace;
+  max-width: 60%;
 `;
 
 const Page = styled.div`
