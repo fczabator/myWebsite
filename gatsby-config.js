@@ -15,6 +15,14 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdowns`
+      }
+    },
+    `gatsby-transformer-remark`,
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
