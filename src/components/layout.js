@@ -6,7 +6,6 @@ import {Navigation} from './Navigation';
 import {theme} from '../constants/theme';
 
 export const Content = styled.div`
-  font-size: 30px;
   font-family: 'Courier New', Courier, monospace;
 `;
 
